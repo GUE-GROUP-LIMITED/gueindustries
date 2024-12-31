@@ -34,20 +34,41 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="logo">
-            <img src="img/logo.png" alt="Aliwe & Gyuve-Ado LTD">
-        </div>
-        <nav>
-            <ul>
+  
+<header>
+    <nav class="nav-wrapper">
+        <div class="container">
+            <a href="index.html" class="brand-logo">
+                <img src="img/logo.png" alt="Aliwe and Gyuve-Ado Logo" class="responsive-img">
+            </a>
+            <!-- Hamburger Menu for Mobile -->
+            <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <!-- Navigation Links (Hidden on Mobile) -->
+            <ul class="right hide-on-med-and-down">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="testimonial.html">Testimonials</a></li>
+                <li><a href="blog.html">Blog</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu (Sidenav) -->
+    <ul class="sidenav" id="mobile-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="testimonial.html">Testimonials</a></li>
+        <li><a href="blog.html">Blog</a></li>
+    </ul>
+</header>
     
     <main>
     <!-- Hero Section -->
