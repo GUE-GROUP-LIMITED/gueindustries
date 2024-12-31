@@ -4,8 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional software development and cybersecurity solutions.">
+    <meta name="keywords" content="software development, cybersecurity, Aliwe and GYUVE-ADO, consultancy, training">
+    <meta charset="UTF-8">
+      <meta name="author" content="Aliwe & Gyuve-Ado">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Aliwe & Gyuve-Ado LTD</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Animate On Scroll (AOS) -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
@@ -23,73 +35,157 @@
             </ul>
         </nav>
     </header>
-
-    <main>
-        <section class="contact-info">
+<main>
+    <!-- Contact Info Section -->
+    <section class="contact-info">
         <h1>Contact Us</h1>
-        <p>We'd love to hear from you! Whether you have questions about our services or would like to discuss a project, please get in touch with us using the form below:</p>
+        <p>
+            We’re here to assist you! Whether you have questions about our services, want to explore partnership opportunities, or require support, 
+            our team is ready to help. Reach out to us through any of the channels below or complete the contact form for a prompt response.
+        </p>
+        <div class="contact-details">
+            <h2>Contact Details</h2>
+            <ul>
+                <li><strong>Address:</strong> Wannune, Tarka, Nigeria</li>
+                <li><strong>Phone:</strong> +234 704 695 2003</li>
+                <li><strong>Email:</strong> <a href="mailto:support@aliwe.com.ng">support@aliwe.com.ng</a></li>
+            </ul>
+        </div>
+    </section>
 
-          <h1>Get in Touch with ALIWE & GYUVE-ADO LTD</h1>
-          <p>Have questions or want to learn more about our services? We’re here to help.</p>
-      
-          <div class="contact-details">
-            <p><strong>Address:</strong> Wannune,Tarka, Nigeria</p>
-            <p><strong>Phone:</strong> +234 704 695 2003</p>
-            <p><strong>Email:</strong> support [at] aliwe.com.ng</p>
-          </div>
-        </section>
-      
-        <section class="business-hours">
-          <h2>Business Hours</h2>
-          <ul>
-            <li>Monday to Friday: 9:00 AM - 5:00 PM</li>
-            <li>Saturday: 10:00 AM - 2:00 PM</li>
-            <li>Sunday: Closed</li>
-          </ul>
-        </section>
+    <!-- Global Offices Section -->
+    <section class="global-offices">
+        <h2>Our Global Presence</h2>
+        <p>
+            While headquartered in Nigeria, ALIWE & GYUVE-ADO LTD serves clients worldwide. Our global network of professionals and partners ensures 
+            that we deliver outstanding solutions tailored to your region and industry.
+        </p>
+    </section>
 
+    <!-- Business Hours Section -->
+    <section class="business-hours">
+        <h2>Business Hours</h2>
+        <p>Our team is available during the following hours:</p>
+        <ul>
+            <li><strong>Monday to Friday:</strong> 9:00 AM - 5:00 PM</li>
+            <li><strong>Saturday:</strong> 10:00 AM - 2:00 PM</li>
+            <li><strong>Sunday:</strong> Closed</li>
+        </ul>
+        <p>If you contact us outside of business hours, please leave a message, and we’ll get back to you as soon as possible.</p>
+    </section>
 
-          <!-- Contact Form Section -->
-    <section class="contact">
-        <form action="#" method="POST">
-            <label for="name">Your Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="email">Your Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="message">Your Message:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
-
-            <input type="submit" value="Send Message">
+    <!-- Contact Form Section -->
+    <section class="contact-form">
+        <h2>Send Us a Message</h2>
+        <p>Fill out the form below, and our team will get back to you promptly. We value your inquiries and feedback.</p>
+        <form action="#" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required />
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Enter the subject" required />
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Enter your message here" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
         </form>
     </section>
-      
-        <section class="contact-form">
-          <h2>Reach Out to Us</h2>
-          <p>Fill out the contact form below, and our team will respond promptly.</p>
-          <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required />
-      
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required />
-      
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" placeholder="Subject" required />
-      
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-      
-            <button type="submit">Submit</button>
-          </form>
-        </section>
-      </main>
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Aliwe & Gyuve-Ado LTD. All rights reserved.</p>
-    </footer>
 
-    <script src="js/script.js"></script>
+    <!-- Additional Resources Section -->
+    <section class="additional-resources">
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <p>Find answers to common inquiries on our <a href="faqs.html">FAQs page</a>. If you don’t see what you’re looking for, don’t hesitate to contact us directly.</p>
+    </section>
+
+    <!-- Map Section -->
+    <section class="location-map">
+        <h2>Visit Our Office</h2>
+        <p>Our office is conveniently located in Wannune, Tarka, Nigeria. Use the map below for directions:</p>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31519.85003505591!2d9.5141928!3d7.4110731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104cc1efcb1c2c4f%3A0xab1b22d40217c51b!2sTarka%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1690382759601!5m2!1sen!2sng" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+</main>
+
+
+<!-- Footer -->
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <!-- Company Info -->
+            <div class="col s12 m6 l4">
+                <h5>CODE-SNIPPET ENTERPRISE</h5>
+                <p>Innovating the future of coding and cybersecurity solutions globally.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col s12 m6 l4 quick-links">
+                <div class="links-column">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="links-column">
+                    <ul>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="testimonial.html">Testimonials</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col s12 m6 l4">
+                <h5>Follow Us</h5>
+                <a href="#" class="btn-floating btn-large waves-effect"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="btn-floating btn-large waves-effect"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="btn-floating btn-large waves-effect"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="btn-floating btn-large waves-effect"><i class="fab fa-github"></i></a>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <p>&copy; 2024 Aliwe & Gyuve-Ado LTD. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(elems);
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
 </body>
 </html>
