@@ -25,6 +25,7 @@ nav ul li a {
 nav ul li a:hover {
     background-color: var(--accent-color); /* Pinkish Red */
     color: var(--text-color-light); /* White */
+    height: fit-content;
 }
 
 /* Logo Styling */
