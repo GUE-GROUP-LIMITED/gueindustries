@@ -40,7 +40,10 @@ nav ul li a:hover {
 .brand-logo img.logo-img:hover {
     transform: scale(1.1); /* Slightly enlarges the logo on hover */
 }
-
+.form-container label{
+    font-size: 50px;
+    margin-bottom: 5rem ;
+}
 /* Responsive Design */
 @media screen and (max-width: 992px) {
     .nav-wrapper ul {
