@@ -1,12 +1,19 @@
+/* Product card image fix */
+.product-image {
+    width: 100%;
+    display: block;
+    border-radius: 8px 8px 0 0;
+    box-shadow: var(--box-shadow);
+}
 
 :root {
-    --primary-color: #29283F; /* Deep Midnight Blue */
-    --secondary-color: #4280EC; /* Blue */
-    --accent-color: #DC7287; /* Pinkish Red */
+    --primary-color: #0F3D3E; /* Deep teal green */
+    --secondary-color: #1B5E20; /* Forest green */
+    --accent-color: #66BB6A; /* Fresh green accent */
     --text-color-light: #FFFFFF; /* White */
-    --text-color-dark: #444444; /* Dark Gray */
-    --highlight-color: #F5F5F5; /* Light Gray */
-    --box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    --text-color-dark: #2F2F2F; /* Dark charcoal */
+    --highlight-color: #E8F5E9; /* Soft green tint */
+    --box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
     --font-family: 'Roboto', sans-serif;
 }
 
