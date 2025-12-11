@@ -181,9 +181,37 @@ nav ul li a.active-nav {
 
 /* Responsive Design */
 @media screen and (max-width: 992px) {
-    .nav-wrapper ul {
-        display: none;
-        /* Hides nav links on smaller screens */
+    .nav-wrapper .container {
+        justify-content: center;
+        position: relative;
+        height: 64px;
+        min-height: 64px;
+    }
+
+    .brand-logo.left {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        margin-right: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .brand-logo.left img.logo-img {
+        height: 48px;
+        max-height: 48px;
+        object-fit: contain;
+        display: block;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .sidenav-trigger.right {
+        right: 18px;
+        left: auto;
+        top: 16px;
     }
 }
 
