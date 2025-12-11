@@ -17,6 +17,79 @@
     --font-family: 'Roboto', sans-serif;
 }
 
+/* Skip to Content Link for Keyboard Accessibility */
+.skip-to-content {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--accent-color);
+    color: var(--text-color-dark);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 10000;
+    border-radius: 0 0 8px 0;
+    transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+    top: 0;
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Active Navigation Indicator */
+nav ul li a.active-nav {
+    background-color: var(--accent-color);
+    color: var(--text-color-dark);
+}
+
+/* Enhanced Focus Indicators for Accessibility */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+    text-decoration: none;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.back-to-top i {
+    font-size: 24px;
+}
+
 /* Header Styles */
 nav ul li a {
     color: var(--text-color-light); /* White */

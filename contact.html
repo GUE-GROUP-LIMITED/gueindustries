@@ -4,23 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Industrial manufacturing, finishing, and contract packaging solutions.">
-        <meta name="keywords" content="manufacturing, contract packaging, finishing, production, logistics, GUE Industries Limited">
-        <meta charset="UTF-8">
-            <meta name="author" content="GUE INDUSTRIES LIMITED">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="./img/logo.png">
-        <title>Contact Us | GUE INDUSTRIES LIMITED</title>
+    <meta name="description" content="Contact GUE Industries Limited in Wannune, Tarka, Nigeria. Get in touch for contract manufacturing, packaging solutions, and partnership opportunities. Phone: +234 704 695 2003.">
+    <meta name="keywords" content="contact, manufacturing, contract packaging, GUE Industries Limited, Wannune, Tarka, Nigeria, phone, email">
+    <meta name="author" content="GUE INDUSTRIES LIMITED">
+    <link rel="icon" href="./img/logo.png">
+    <title>Contact Us - Get In Touch | GUE Industries Limited</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact GUE Industries Limited">
+    <meta property="og:description" content="Get in touch for contract manufacturing and packaging solutions. Located in Wannune, Tarka, Nigeria.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gueindustries.com/contact.html">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Contact GUE Industries Limited">
+    <meta name="twitter:description" content="Get in touch for manufacturing and packaging solutions in Nigeria.">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Google Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Animate On Scroll (AOS) -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
     <!-- Header -->
 <header>
     <nav class="nav-wrapper green darken-3">
@@ -36,7 +47,7 @@
                 <li><a href="about.html" class="white-text">About Us</a></li>
                 <li><a href="services.html" class="white-text">Services</a></li>
                 <li><a href="portfolio.html" class="white-text">Products</a></li>
-                <li><a href="contact.html" class="white-text">Contact</a></li>
+                <li><a href="contact.html" class="white-text active-nav">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -45,11 +56,11 @@
         <li><a href="about.html" class="green-text text-darken-4">About Us</a></li>
         <li><a href="services.html" class="green-text text-darken-4">Services</a></li>
         <li><a href="portfolio.html" class="green-text text-darken-4">Products</a></li>
-        <li><a href="contact.html" class="green-text text-darken-4">Contact</a></li>
+        <li><a href="contact.html" class="green-text text-darken-4 active-nav">Contact</a></li>
     </ul>
 </header>
 
-<main>
+<main id="main-content">
     <!-- Hero Section -->
     <section class="hero-section" style="position: relative; overflow: hidden; background-color: #0f3d3e; background-image: linear-gradient(120deg, rgba(15,61,62,0.85) 0%, rgba(27,94,32,0.75) 100%), url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&h=1080&fit=crop&q=80'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: scroll; min-height: 480px; width: 100%;">
         <div class="container center-align" style="position: relative; z-index: 1; padding: 70px 20px 80px; max-width: 1140px;">
@@ -141,23 +152,28 @@
         <div class="container">
             <h2 class="sub-section-title" style="color: var(--accent-color); font-weight: 600;">Partner With Us</h2>
             <p>Interested in our products, distribution opportunities, or manufacturing partnerships? Fill out the form below and our team will respond promptly.</p>
-            <form action="#" method="POST" class="form-container">
+            <form action="#" method="POST" class="form-container" id="contactForm" novalidate>
                 <div class="input-field">
                     <label for="name" class="active" style="color: var(--text-color-light);">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required style="background-color: var(--text-color-light); border-radius: 4px;">
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required minlength="2" style="background-color: var(--text-color-light); border-radius: 4px;">
+                    <span class="helper-text" data-error="Please enter your name (minimum 2 characters)" style="color: #ffcdd2;"></span>
                 </div>
                 <div class="input-field">
                     <label for="email" class="active" style="color: var(--text-color-light);">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required style="background-color: var(--text-color-light); border-radius: 4px;">
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" style="background-color: var(--text-color-light); border-radius: 4px;">
+                    <span class="helper-text" data-error="Please enter a valid email address" style="color: #ffcdd2;"></span>
                 </div>
                 <div class="input-field">
                     <label for="subject" class="active" style="color: var(--text-color-light);">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Enter the subject" required style="background-color: var(--text-color-light); border-radius: 4px;">
+                    <input type="text" id="subject" name="subject" placeholder="Enter the subject" required minlength="3" style="background-color: var(--text-color-light); border-radius: 4px;">
+                    <span class="helper-text" data-error="Please enter a subject (minimum 3 characters)" style="color: #ffcdd2;"></span>
                 </div>
                 <div class="input-field">
                     <label for="message" class="active" style="color: var(--text-color-light);">Your Message</label>
-                    <textarea id="message" name="message" rows="5" class="materialize-textarea" placeholder="Enter your message here" required style="background-color: var(--text-color-light); border-radius: 4px;"></textarea>
+                    <textarea id="message" name="message" rows="5" class="materialize-textarea" placeholder="Enter your message here" required minlength="10" style="background-color: var(--text-color-light); border-radius: 4px;"></textarea>
+                    <span class="helper-text" data-error="Please enter a message (minimum 10 characters)" style="color: #ffcdd2;"></span>
                 </div>
+                <div id="formFeedback" style="margin-bottom: 15px; padding: 10px; border-radius: 4px; display: none;"></div>
                 <button type="submit" class="btn waves-effect waves-light" style="background-color: var(--accent-color); border-radius: 4px; padding: 10px 20px;">Send Message</button>
             </form>
         </div>
@@ -166,8 +182,8 @@
     <!-- Additional Resources Section -->
     <section class="additional-resources section-padding" style="background-color: var(--highlight-color); padding: 40px 0;">
         <div class="container">
-            <h2 class="sub-section-title" style="color: var(--primary-color); font-weight: 600;">Frequently Asked Questions (FAQs)</h2>
-            <p>Find answers to common inquiries on our <a href="faqs.html" style="color: var(--accent-color); text-decoration: underline;">FAQs page</a>. If you don’t see what you’re looking for, don’t hesitate to contact us directly.</p>
+            <h2 class="sub-section-title" style="color: var(--primary-color); font-weight: 600;">Get In Touch</h2>
+            <p>We're here to answer any questions you may have about our manufacturing services, products, or partnership opportunities. Don't hesitate to reach out directly via phone or email.</p>
         </div>
     </section>
 
@@ -219,11 +235,6 @@
                     <i class="material-icons">email</i> Email: info@gueindustries.com<br>
                     <i class="material-icons" style="opacity:0;">email</i> Email: contact@gueindustries.com
                 </p>
-                <div>
-                    <a href="https://twitter.com/yourcompany" class="btn-floating btn-small waves-effect waves-light blue"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/company/yourcompany" class="btn-floating btn-small waves-effect waves-light blue"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.facebook.com/yourcompany" class="btn-floating btn-small waves-effect waves-light blue"><i class="fab fa-facebook"></i></a>
-                </div>
             </div>
         </div>
     </div>
@@ -234,12 +245,100 @@
     </div>
 </footer>
 
+<!-- Back to Top Button -->
+<a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="material-icons">arrow_upward</i>
+</a>
+
 <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // Initialize Sidenav
         var elems = document.querySelectorAll('.sidenav');
         M.Sidenav.init(elems);
+        
+        // Back to Top Button Functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Form Validation and Submission
+        const contactForm = document.getElementById('contactForm');
+        const formFeedback = document.getElementById('formFeedback');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Validate form
+            let isValid = true;
+            let errors = [];
+            
+            if (name.length < 2) {
+                isValid = false;
+                errors.push('Name must be at least 2 characters long');
+            }
+            
+            const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+            if (!emailPattern.test(email)) {
+                isValid = false;
+                errors.push('Please enter a valid email address');
+            }
+            
+            if (subject.length < 3) {
+                isValid = false;
+                errors.push('Subject must be at least 3 characters long');
+            }
+            
+            if (message.length < 10) {
+                isValid = false;
+                errors.push('Message must be at least 10 characters long');
+            }
+            
+            if (!isValid) {
+                formFeedback.style.display = 'block';
+                formFeedback.style.backgroundColor = '#ffcdd2';
+                formFeedback.style.color = '#c62828';
+                formFeedback.innerHTML = '<strong>Please correct the following errors:</strong><br>' + errors.join('<br>');
+                return false;
+            }
+            
+            // If validation passes, show success message
+            formFeedback.style.display = 'block';
+            formFeedback.style.backgroundColor = '#c8e6c9';
+            formFeedback.style.color = '#2e7d32';
+            formFeedback.innerHTML = '<strong>Thank you for your message!</strong><br>We will get back to you soon. For immediate assistance, call +234 704 695 2003.';
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(function() {
+                formFeedback.style.display = 'none';
+            }, 5000);
+            
+            return false;
+        });
     });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
