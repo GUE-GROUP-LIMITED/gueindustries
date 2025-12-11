@@ -62,7 +62,7 @@
     <!-- Hero Section -->
     <section class="hero-section" style="position: relative; overflow: hidden; background-color: #0f3d3e; background-image: linear-gradient(120deg, rgba(15,61,62,0.85) 0%, rgba(27,94,32,0.75) 100%), url('https://images.unsplash.com/photo-1598285385411-c5952310875e?w=1920&h=1080&fit=crop&q=80'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: scroll; min-height: 480px; width: 100%;">
         <div class="container center-align" style="position: relative; z-index: 1; padding: 70px 20px 80px; max-width: 1140px;">
-            <p style="margin: 0 0 6px; font-size: 0.95rem; letter-spacing: 2px; text-transform: uppercase; color: #e8f5e9;">GUE INDUSTRIES LIMITED • RC 7501599 • Registered May 17, 2024</p>
+            
             <h1 style="font-weight: 800; margin: 8px auto 14px; font-size: 2.8rem; line-height: 1.15; letter-spacing: 0.4px; color: #fff; max-width: 900px;">
                 Our Products
             </h1>
@@ -222,7 +222,7 @@
     </div>
     <div class="footer-copyright">
         <div class="container">
-            <span class="white-text">© 2024 GUE INDUSTRIES LIMITED. RC 7501599. Registered May 17, 2024.</span>
+            <span class="white-text">© 2024–<span id="currentYear"></span> GUE INDUSTRIES LIMITED. RC 7501599.</span>
         </div>
     </div>
 </footer>
@@ -258,6 +258,9 @@
                 behavior: 'smooth'
             });
         });
+
+        var yearEl = document.getElementById('currentYear');
+        if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
     });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
