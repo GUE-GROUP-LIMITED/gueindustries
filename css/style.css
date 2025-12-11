@@ -7,12 +7,18 @@
 }
 
 :root {
-    --primary-color: #0F3D3E; /* Deep teal green */
-    --secondary-color: #1B5E20; /* Forest green */
-    --accent-color: #66BB6A; /* Fresh green accent */
-    --text-color-light: #FFFFFF; /* White */
-    --text-color-dark: #2F2F2F; /* Dark charcoal */
-    --highlight-color: #E8F5E9; /* Soft green tint */
+    --primary-color: #0F3D3E;
+    /* Deep teal green */
+    --secondary-color: #1B5E20;
+    /* Forest green */
+    --accent-color: #66BB6A;
+    /* Fresh green accent */
+    --text-color-light: #FFFFFF;
+    /* White */
+    --text-color-dark: #2F2F2F;
+    /* Dark charcoal */
+    --highlight-color: #E8F5E9;
+    /* Soft green tint */
     --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
     --font-family: 'Roboto', sans-serif;
 }
@@ -109,12 +115,20 @@ header .brand-logo {
     align-items: center;
     padding: 0;
     margin-right: 12px;
+    margin-right: auto;
 }
 
 nav ul {
     display: flex;
     align-items: center;
     margin-left: auto;
+}
+
+nav ul.right {
+    margin-left: auto;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li {
@@ -159,21 +173,25 @@ nav ul li a.active-nav {
     transform: scale(1.08);
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
-.form-container label{
+
+.form-container label {
     font-size: 50px;
-    margin-bottom: 5rem ;
+    margin-bottom: 5rem;
 }
+
 /* Responsive Design */
 @media screen and (max-width: 992px) {
     .nav-wrapper ul {
-        display: none; /* Hides nav links on smaller screens */
+        display: none;
+        /* Hides nav links on smaller screens */
     }
 }
 
 
 @media (max-width: 768px) {
     nav ul {
-        display: none; /* Hide nav links on mobile */
+        display: none;
+        /* Hide nav links on mobile */
     }
 
     .sidenav-trigger {
