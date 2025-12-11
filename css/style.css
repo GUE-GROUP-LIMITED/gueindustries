@@ -263,3 +263,19 @@ nav ul li a.active-nav {
         display: inline-block;
     }
 }
+
+/* Hamburger Menu Positioning */
+.sidenav-trigger.right {
+    position: absolute;
+    right: 18px;
+    top: 16px;
+    display: inline-block;
+    z-index: 1001;
+}
+
+@media (max-width: 992px) {
+    .sidenav-trigger.right {
+        right: 18px;
+        top: 16px;
+    }
+}
