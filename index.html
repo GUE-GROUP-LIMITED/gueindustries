@@ -49,6 +49,7 @@
             <div class="container">
                 <a href="index.html" class="brand-logo left">
                     <img src="img/logo.png" alt="GUE INDUSTRIES LIMITED Logo" class="responsive-img logo-img">
+                    <span class="brand-text">GUE Industries Limited</span>
                 </a>
                 <a href="#" data-target="mobile-menu" class="sidenav-trigger right">
                     <i class="material-icons">menu</i>
@@ -74,7 +75,7 @@
     <main id="main-content" style="font-family: var(--font-family);">
         <!-- Hero Section -->
         <section class="hero-section"
-            style="position: relative; overflow: hidden; background-color: #0f3d3e; background-image: linear-gradient(120deg, rgba(15,61,62,0.45) 0%, rgba(27,94,32,0.35) 100%), url('https://images.unsplash.com/photo-1595798896730-9fdf2e709649?w=1920&h=1080&fit=crop&q=80'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: scroll; min-height: 560px; width: 100%;">
+            style="position: relative; overflow: hidden; background-color: #0f3d3e; background-image: linear-gradient(120deg, rgba(15,61,62,0.85) 0%, rgba(27,94,32,0.75) 100%), url('https://images.unsplash.com/photo-1595798896730-9fdf2e709649?w=1920&h=1080&fit=crop&q=80'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: scroll; min-height: 560px; width: 100%;">
             <div class="container center-align"
                 style="position: relative; z-index: 1; padding: 90px 20px 110px; max-width: 1180px;">
 
@@ -303,9 +304,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Initialize Sidenav
+            // Initialize Sidenav (slide in from right)
             var elems = document.querySelectorAll('.sidenav');
-            M.Sidenav.init(elems);
+            M.Sidenav.init(elems, { edge: 'right' });
 
             // Back to Top Button Functionality
             const backToTopBtn = document.getElementById('backToTop');
