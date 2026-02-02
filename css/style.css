@@ -240,9 +240,29 @@ nav ul li a:active {
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
+/* Contact Form Styling */
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center; /* Center the submit button */
+}
+
+.form-container .input-field {
+    text-align: left; /* Keep inputs and labels left-aligned */
+    margin-bottom: 1.5rem;
+}
+
 .form-container label {
-    font-size: 50px;
-    margin-bottom: 5rem;
+    font-size: 1rem; /* Reset to normal size */
+    margin-bottom: 0.5rem;
+}
+
+.form-container button[type="submit"] {
+    margin-top: 1rem;
+    min-width: 200px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Services Grid */
@@ -365,6 +385,18 @@ a.btn {
 .footer-copyright {
     background: rgba(0, 0, 0, 0.1);
     border-top: 1px solid rgba(255, 255, 255, 0.14);
+    text-align: center; /* Center align copyright */
+    font-size: 0.9rem; /* Consistent font size */
+}
+
+.footer-copyright .container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.page-footer p, .page-footer ul li a, .page-footer .contact {
+    font-size: 0.95rem; /* Standardized footer text size */
 }
 
 /* Responsive Footer */
@@ -392,4 +424,17 @@ a.btn {
     .sidenav-trigger { display: inline-flex; align-items: center; }
     .sidenav-trigger.right { right: 18px; top: 14px; left: auto; }
     .sidenav-trigger i.material-icons { font-size: 48px; line-height: 1; }
+}
+
+/* =========================================
+   Button Hover Animations
+   ========================================= */
+.btn, .btn-large, a.btn {
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover, .btn-large:hover, a.btn:hover {
+    transform: scale(0.95);
+    filter: brightness(1.15) contrast(1.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow reduction to match shrink */
 }
