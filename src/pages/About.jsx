@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { ArrowRight } from 'lucide-react';
 
 const whatWeDo = [
   { title: 'Manufacturing', desc: 'Blending, filling, cooking, and assembly lines tailored to consumer staples.' },
@@ -38,14 +39,14 @@ export default function About() {
               We design, run, and scale production lines for cooking oil, rice, detergents, beverages, spices, personal care, and household essentials—built in Nigeria, aligned to GMP, and ready for AfCFTA markets.
             </p>
             <div className="page-hero-actions">
-              <Link to="/products" className="btn-primary">View Products <span className="arrow">→</span></Link>
+              <Link to="/products" className="btn-primary">View Products <ArrowRight size={16} className="arrow" /></Link>
               <Link to="/services" className="btn-secondary">What We Do</Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Who We Are — Split */}
+      {/* Who We Are */}
       <section className="section" style={{ background: 'var(--color-warm-white)' }}>
         <div className="container">
           <div className="feature-split">
@@ -74,7 +75,7 @@ export default function About() {
           <div className="reveal" style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto var(--space-3xl)' }}>
             <h2 className="section-title light">What We Do</h2>
           </div>
-          <div className="card-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))' }}>
+          <div className="card-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))' }}>
             {whatWeDo.map((item, i) => (
               <div className="reveal" key={item.title} style={{ transitionDelay: `${i * 0.1}s` }}>
                 <div style={{
@@ -101,7 +102,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* How We Work — Split Reverse */}
+      {/* How We Work */}
       <section className="section" style={{ background: 'var(--color-white)' }}>
         <div className="container">
           <div className="feature-split reverse">
@@ -165,7 +166,7 @@ export default function About() {
             </div>
           </div>
           <div className="reveal" style={{ textAlign: 'center', marginTop: 'var(--space-3xl)' }}>
-            <Link to="/contact" className="btn-dark">Partner With Us <span className="arrow">→</span></Link>
+            <Link to="/contact" className="btn-dark">Partner With Us <ArrowRight size={16} className="arrow" /></Link>
           </div>
         </div>
       </section>

@@ -1,34 +1,35 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { Cog, Package, ShieldCheck, Truck, BarChart3, Globe, ArrowRight } from 'lucide-react';
 
 const services = [
   {
-    icon: '⚙️',
+    icon: <Cog size={24} />,
     title: 'Manufacturing & Assembly',
     desc: 'Blending, cooking, filling, and assembly lines tuned for consistent yields and throughput.',
   },
   {
-    icon: '📦',
+    icon: <Package size={24} />,
     title: 'Finishing & Packaging',
     desc: 'Labeling, kitting, sealing, shrink, and secondary packaging to retail-ready standards.',
   },
   {
-    icon: '✓',
+    icon: <ShieldCheck size={24} />,
     title: 'Quality & Compliance',
     desc: 'GMP-aligned SOPs, batch documentation, and QA checkpoints for audit readiness.',
   },
   {
-    icon: '🚚',
+    icon: <Truck size={24} />,
     title: 'Logistics & Warehousing',
     desc: 'Storage, inventory control, and routed dispatch to keep deliveries on time.',
   },
   {
-    icon: '📊',
+    icon: <BarChart3 size={24} />,
     title: 'Process Optimization',
     desc: 'Line balancing, yield improvement, and capacity planning to reduce cost per unit.',
   },
   {
-    icon: '🌍',
+    icon: <Globe size={24} />,
     title: 'AfCFTA Readiness',
     desc: 'Packaging, labeling, and compliance aligned for regional trade within AfCFTA.',
   },
@@ -51,7 +52,7 @@ export default function Services() {
               Manufacturing, finishing, quality, and logistics for everyday consumer goods—built in Nigeria, aligned to GMP, and ready for AfCFTA markets.
             </p>
             <div className="page-hero-actions">
-              <Link to="/products" className="btn-primary">View Products <span className="arrow">→</span></Link>
+              <Link to="/products" className="btn-primary">View Products <ArrowRight size={16} className="arrow" /></Link>
               <Link to="/contact" className="btn-secondary">Talk to Us</Link>
             </div>
           </div>
@@ -132,7 +133,7 @@ export default function Services() {
             <p className="section-description light" style={{ margin: '0 auto var(--space-xl)', textAlign: 'center' }}>
               Let's plan formulations, SKUs, packaging, and logistics to get your products shelf-ready across Nigeria and West Africa.
             </p>
-            <Link to="/contact" className="btn-primary">Talk to Our Team <span className="arrow">→</span></Link>
+            <Link to="/contact" className="btn-primary">Talk to Our Team <ArrowRight size={16} className="arrow" /></Link>
           </div>
         </div>
       </section>

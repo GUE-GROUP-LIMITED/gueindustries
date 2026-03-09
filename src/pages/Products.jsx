@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { ArrowRight, ArrowDown } from 'lucide-react';
 
 const products = [
   {
@@ -56,7 +57,7 @@ export default function Products() {
               Quality everyday products manufactured for the Nigerian and West African market. From household essentials to personal care, we deliver trusted goods at accessible prices.
             </p>
             <div className="page-hero-actions">
-              <a href="#products" className="btn-primary">Explore Products <span className="arrow">↓</span></a>
+              <a href="#products" className="btn-primary">Explore Products <ArrowDown size={16} className="arrow" /></a>
               <Link to="/contact" className="btn-secondary">Contact Us</Link>
             </div>
           </div>
@@ -83,7 +84,7 @@ export default function Products() {
                   <h3 className="product-card-title">{product.title}</h3>
                   <p className="product-card-desc">{product.desc}</p>
                   <span className="product-card-link">
-                    Show More <span>→</span>
+                    Show More <ArrowRight size={14} />
                   </span>
                 </div>
               </div>
@@ -103,7 +104,7 @@ export default function Products() {
                 We're building quality consumer goods for African markets.
               </p>
               <div>
-                <Link to="/contact" className="btn-primary">Get in Touch <span className="arrow">→</span></Link>
+                <Link to="/contact" className="btn-primary">Get in Touch <ArrowRight size={16} className="arrow" /></Link>
               </div>
             </div>
             <div className="cta-banner-image">

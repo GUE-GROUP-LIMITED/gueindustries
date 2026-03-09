@@ -1,24 +1,25 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { Cog, ShieldCheck, Package, Truck, ArrowRight, ArrowDown } from 'lucide-react';
 
 const whyChooseUs = [
   {
-    icon: '⚙️',
+    icon: <Cog size={24} />,
     title: 'Production Excellence',
     desc: 'Lean, safety-led lines engineered for throughput, traceability, and consistent output.',
   },
   {
-    icon: '✓',
+    icon: <ShieldCheck size={24} />,
     title: 'Quality & Compliance',
     desc: 'GMP-aligned SOPs, batch documentation, and QA checkpoints for audit readiness.',
   },
   {
-    icon: '📦',
+    icon: <Package size={24} />,
     title: 'Finishing & Packaging',
     desc: 'Labeling, kitting, secondary packaging, and contract fills to your specs.',
   },
   {
-    icon: '🚚',
+    icon: <Truck size={24} />,
     title: 'Supply Reliability',
     desc: 'Integrated planning, warehousing, and logistics to keep deliveries on schedule.',
   },
@@ -73,7 +74,7 @@ export default function Home() {
               </p>
               <div className="hero-actions">
                 <Link to="/products" className="btn-primary">
-                  Shop Now <span className="arrow">→</span>
+                  Shop Now <ArrowRight size={16} className="arrow" />
                 </Link>
                 <Link to="/services" className="btn-secondary">
                   Our Services
@@ -145,13 +146,13 @@ export default function Home() {
           </div>
           <div className="reveal" style={{ textAlign: 'center', marginTop: 'var(--space-3xl)' }}>
             <Link to="/contact" className="btn-dark">
-              Contact Us Today <span className="arrow">→</span>
+              Contact Us Today <ArrowRight size={16} className="arrow" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Featured Section — Split Layout inspired by screenshot 3 */}
+      {/* Featured Section — Split Layout */}
       <section className="section" style={{ background: 'var(--color-forest-deep)' }}>
         <div className="container">
           <div className="feature-split">
@@ -165,7 +166,7 @@ export default function Home() {
                 We combine modern equipment with skilled teams for safe, efficient, and scalable output.
               </p>
               <Link to="/services" className="btn-primary">
-                Explore More <span className="arrow">→</span>
+                Explore More <ArrowRight size={16} className="arrow" />
               </Link>
             </div>
             <div className="reveal-right">
@@ -181,7 +182,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Facilities Cards — Like "Latest Collection" from screenshot 4 */}
+      {/* Facilities Cards */}
       <section className="section" style={{ background: 'var(--color-cream)' }}>
         <div className="container">
           <div className="reveal" style={{ marginBottom: 'var(--space-3xl)' }}>
@@ -200,7 +201,7 @@ export default function Home() {
                   <h3 className="product-card-title">{fac.title}</h3>
                   <p className="product-card-desc">{fac.desc}</p>
                   <Link to="/services" className="product-card-link">
-                    Learn More <span>→</span>
+                    Learn More <ArrowRight size={14} />
                   </Link>
                 </div>
               </div>
@@ -209,7 +210,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Banner — Like screenshot 1 promo banner */}
+      {/* CTA Banner */}
       <section className="section-sm" style={{ background: 'var(--color-warm-white)' }}>
         <div className="container">
           <div className="cta-banner reveal-scale">
@@ -223,7 +224,7 @@ export default function Home() {
               </p>
               <div>
                 <Link to="/contact" className="btn-primary">
-                  Talk to Us <span className="arrow">→</span>
+                  Talk to Us <ArrowRight size={16} className="arrow" />
                 </Link>
               </div>
             </div>

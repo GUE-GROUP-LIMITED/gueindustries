@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { MapPin, Phone, Mail, Factory, Globe, TrendingUp, ArrowRight, ArrowDown } from 'lucide-react';
 
 const visionCards = [
-  { icon: '🏭', title: 'Manufacturing Hub', desc: 'Nigeria-based production facility' },
-  { icon: '🌍', title: 'AfCFTA Ready', desc: 'Positioned for continental trade' },
-  { icon: '📈', title: 'Growth Focused', desc: 'Scaling to serve African markets' },
+  { icon: <Factory size={32} />, title: 'Manufacturing Hub', desc: 'Nigeria-based production facility' },
+  { icon: <Globe size={32} />, title: 'AfCFTA Ready', desc: 'Positioned for continental trade' },
+  { icon: <TrendingUp size={32} />, title: 'Growth Focused', desc: 'Scaling to serve African markets' },
 ];
 
 export default function Contact() {
@@ -49,7 +50,7 @@ export default function Contact() {
               Contact GUE Industries Limited for partnership inquiries, distribution opportunities, and product information. We're building quality consumer goods for African markets.
             </p>
             <div className="page-hero-actions">
-              <a href="#contact-form" className="btn-primary">Send Message <span className="arrow">↓</span></a>
+              <a href="#contact-form" className="btn-primary">Send Message <ArrowDown size={16} className="arrow" /></a>
               <Link to="/products" className="btn-secondary">View Products</Link>
             </div>
           </div>
@@ -110,7 +111,7 @@ export default function Contact() {
                   <textarea className="form-textarea" id="message" name="message" placeholder="Enter your message here" rows="5" value={formData.message} onChange={handleChange} required />
                 </div>
                 <button type="submit" className="btn-dark" style={{ width: '100%', justifyContent: 'center' }}>
-                  Send Message <span className="arrow">→</span>
+                  Send Message <ArrowRight size={16} className="arrow" />
                 </button>
               </form>
             </div>
@@ -120,21 +121,21 @@ export default function Contact() {
               <div className="contact-info-card">
                 <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', marginBottom: 'var(--space-2xl)' }}>Contact Details</h3>
                 <div className="contact-info-item">
-                  <div className="contact-info-icon">📍</div>
+                  <div className="contact-info-icon"><MapPin size={20} /></div>
                   <div>
                     <div className="contact-info-label">Address</div>
                     <div className="contact-info-value">Wannune, Tarka, Nigeria</div>
                   </div>
                 </div>
                 <div className="contact-info-item">
-                  <div className="contact-info-icon">📞</div>
+                  <div className="contact-info-icon"><Phone size={20} /></div>
                   <div>
                     <div className="contact-info-label">Phone</div>
                     <div className="contact-info-value">+234 704 695 2003</div>
                   </div>
                 </div>
                 <div className="contact-info-item">
-                  <div className="contact-info-icon">✉️</div>
+                  <div className="contact-info-icon"><Mail size={20} /></div>
                   <div>
                     <div className="contact-info-label">Email</div>
                     <div className="contact-info-value">info@gueindustries.com</div>
@@ -178,7 +179,7 @@ export default function Contact() {
               onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.1)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
               onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}
               >
-                <div style={{ fontSize: '2.5rem', marginBottom: 'var(--space-md)' }}>{card.icon}</div>
+                <div style={{ marginBottom: 'var(--space-md)', color: 'var(--color-accent)' }}>{card.icon}</div>
                 <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.2rem', color: 'var(--color-accent)', marginBottom: 'var(--space-xs)' }}>{card.title}</h3>
                 <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem' }}>{card.desc}</p>
               </div>
