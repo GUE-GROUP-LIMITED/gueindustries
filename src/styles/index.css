@@ -301,27 +301,10 @@ ul, ol {
   position: relative;
 }
 
-.navbar-links a::before,
-.navbar-links a::after {
-  font-weight: 400;
-  opacity: 0.5;
-  transition: opacity var(--duration-fast) var(--ease-out);
-}
-
-.navbar-links a::before { content: '{'; margin-right: 4px; }
-.navbar-links a::after { content: '}'; margin-left: 4px; }
-
 .navbar-links a:hover,
 .navbar-links a.active {
   border-color: rgba(255,255,255,0.3);
   background: rgba(255,255,255,0.08);
-}
-
-.navbar-links a:hover::before,
-.navbar-links a:hover::after,
-.navbar-links a.active::before,
-.navbar-links a.active::after {
-  opacity: 1;
 }
 
 .navbar-cta {
