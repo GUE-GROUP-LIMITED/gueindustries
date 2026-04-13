@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { ArrowRight, ArrowDown } from 'lucide-react';
@@ -7,41 +8,66 @@ const products = [
     title: 'Household Cleaning Products',
     desc: 'Detergents, bleach, floor cleaners, and disinfectants manufactured to international standards. Affordable, effective formulations trusted by Nigerian households.',
     image: 'https://images.unsplash.com/photo-1550963295-019d8a8a61c5?w=600&h=400&fit=crop',
+    items: [
+      'Powder detergent',
+      'Liquid detergent',
+      'Liquid antiseptic disinfectant',
+      'Concentrated liquid disinfectant',
+      'Dishwashing liquid (degreasing)',
+      'Room freshener',
+    ],
   },
   {
     title: 'Personal Care & Hygiene',
     desc: 'Bar soaps, liquid soaps, hand sanitizers, and body lotions. Quality personal care essentials for everyday use across West Africa.',
     image: 'https://images.unsplash.com/photo-1599144836816-334b13e2f7b0?w=600&h=400&fit=crop',
+    items: [
+      'Shampoo',
+      'Hair conditioner',
+      'Hair cream (hair food)',
+      'Body cream',
+      'Petroleum jelly',
+    ],
   },
   {
     title: 'Food & Beverage Products',
     desc: 'Packaged drinking water, fruit juices, and processed food items. NAFDAC-approved products meeting strict safety and quality standards.',
     image: 'https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=600&h=400&fit=crop',
+    items: ['Packaged drinking water', 'Fruit juices', 'Processed food products'],
   },
   {
     title: 'Cooking & Kitchen Essentials',
     desc: 'Cooking oil, seasonings, spices, and condiments packaged for the Nigerian kitchen. Fresh, authentic flavors at competitive prices.',
     image: 'https://images.unsplash.com/photo-1654064756910-974764816931?w=600&h=400&fit=crop',
+    items: ['Cooking oil', 'Seasonings', 'Spices', 'Condiments'],
   },
   {
     title: 'Disposable & Packaging Items',
     desc: 'Plastic bags, food containers, disposable plates, and cups. Durable, hygienic packaging solutions for homes and businesses.',
     image: 'https://images.unsplash.com/photo-1648587456176-4969b0124b12?w=600&h=400&fit=crop',
+    items: ['Plastic bags', 'Food containers', 'Disposable plates', 'Disposable cups'],
   },
   {
     title: 'Baby & Childcare Products',
     desc: 'Diapers, baby wipes, baby powder, and lotions. Safe, gentle products trusted by Nigerian parents for their children\'s care.',
     image: 'https://images.unsplash.com/photo-1697906099284-44220d8868c3?w=600&h=400&fit=crop',
+    items: ['Diapers', 'Baby wipes', 'Baby powder', 'Baby lotions'],
   },
   {
     title: 'Animal Feed & Nutrition',
     desc: 'Premium feed formulations for poultry, fish, cattle, goats, and other livestock. Nutrient-rich, balanced feeds supporting optimal animal health and productivity across African farms.',
     image: 'https://images.unsplash.com/photo-1636986766802-a9bf23d30448?w=600&h=400&fit=crop',
+    items: ['Poultry feed', 'Fish feed', 'Cattle feed', 'Goat feed'],
   },
 ];
 
 export default function Products() {
   const sectionRef = useScrollReveal();
+  const [expanded, setExpanded] = useState({});
+
+  const toggleExpanded = (title) => {
+    setExpanded((prev) => ({ ...prev, [title]: !prev[title] }));
+  };
 
   return (
     <div className="page-transition" ref={sectionRef}>
@@ -83,9 +109,26 @@ export default function Products() {
                 <div className="product-card-body">
                   <h3 className="product-card-title">{product.title}</h3>
                   <p className="product-card-desc">{product.desc}</p>
-                  <span className="product-card-link">
-                    Show More <ArrowRight size={14} />
-                  </span>
+                  <button
+                    type="button"
+                    className="product-card-link"
+                    onClick={() => toggleExpanded(product.title)}
+                    style={{ background: 'none', border: 'none', padding: 0 }}
+                  >
+                    {expanded[product.title] ? 'Show Less' : 'Show More'} <ArrowRight size={14} />
+                  </button>
+                  {expanded[product.title] && (
+                    <div style={{ marginTop: 'var(--space-md)' }}>
+                      <p style={{ fontSize: '0.86rem', fontWeight: 700, color: 'var(--color-forest-deep)', marginBottom: 'var(--space-xs)' }}>
+                        Products in this category:
+                      </p>
+                      <ul style={{ listStyle: 'disc', paddingLeft: '1.1rem', color: 'var(--color-gray-600)', fontSize: '0.92rem', lineHeight: 1.65 }}>
+                        {product.items.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

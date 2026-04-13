@@ -69,8 +69,12 @@ export default function Home() {
                 & Packaging Hub
               </h1>
               <p className="hero-subtitle">
-                GUE Industries Limited turns raw materials into shelf-ready consumer goods—cooking oil, rice,
+                GUE INDUSTRIAL PARKS LTD. turns raw materials into shelf-ready consumer goods—cooking oil, rice,
                 detergents, beverages, spices, personal care, and household essentials—built for Africa under AfCFTA.
+                {' '}We are a subsidiary of GUE Group Limited, our holding company. Visit:{' '}
+                <a href="https://www.guegroup.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
+                  www.guegroup.com
+                </a>
               </p>
               <div className="hero-actions">
                 <Link to="/products" className="btn-primary">
@@ -84,7 +88,7 @@ export default function Home() {
             <div className="hero-images">
               <img
                 src="https://images.unsplash.com/photo-1621954938124-02e637ba3584?w=800&h=600&fit=crop&q=80"
-                alt="GUE Industries manufacturing facility"
+                alt="GUE INDUSTRIAL PARKS LTD. manufacturing facility"
                 className="hero-main-image"
                 loading="eager"
               />
@@ -231,7 +235,7 @@ export default function Home() {
             <div className="cta-banner-image">
               <img
                 src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&h=500&fit=crop&q=80"
-                alt="GUE Industries warehouse"
+                alt="GUE INDUSTRIAL PARKS LTD. warehouse"
                 loading="lazy"
               />
             </div>

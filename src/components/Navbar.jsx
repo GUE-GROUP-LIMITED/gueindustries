@@ -37,8 +37,8 @@ export default function Navbar() {
         <div className="container">
           <div className="navbar-inner">
             <Link to="/" className="navbar-logo">
-              <img src="/logo.png" alt="GUE Industries Limited Logo" />
-              <span>GUE Industries</span>
+              <img src="/logo.png" alt="GUE INDUSTRIAL PARKS LTD. Logo" />
+              <span>GUE INDUSTRIAL PARKS LTD.</span>
             </Link>
 
             <div className="navbar-links">

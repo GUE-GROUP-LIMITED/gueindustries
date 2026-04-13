@@ -54,10 +54,16 @@ export default function About() {
               <p className="section-label">Who we are</p>
               <h2 className="section-title">Built for Africa's Consumer Market</h2>
               <p className="section-description" style={{ marginBottom: 'var(--space-lg)' }}>
-                GUE Industries Limited is a Nigeria-based manufacturer and contract packer for everyday consumer goods. We operate lean, safe, and compliant lines to take products from formulation to shelf with speed and reliability.
+                GUE INDUSTRIAL PARKS LTD. is a Nigeria-based manufacturer and contract packer for everyday consumer goods. We operate lean, safe, and compliant lines to take products from formulation to shelf with speed and reliability.
               </p>
               <p className="section-description">
                 Our teams blend engineering discipline, QA rigor, and supply chain coordination—so brands can scale in Nigeria and expand across Africa under AfCFTA.
+              </p>
+              <p className="section-description" style={{ marginTop: 'var(--space-sm)' }}>
+                GUE INDUSTRIAL PARKS LTD. is a subsidiary of GUE Group Limited, the holding company. Visit GUE Group:{' '}
+                <a href="https://www.guegroup.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
+                  www.guegroup.com
+                </a>
               </p>
             </div>
             <div className="reveal-right">

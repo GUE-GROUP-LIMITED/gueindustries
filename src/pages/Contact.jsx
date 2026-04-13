@@ -47,7 +47,7 @@ export default function Contact() {
             <p className="section-label" style={{ color: 'var(--color-accent)' }}>Get in Touch</p>
             <h1 className="page-hero-title">Contact Us</h1>
             <p className="page-hero-desc">
-              Contact GUE Industries Limited for partnership inquiries, distribution opportunities, and product information. We're building quality consumer goods for African markets.
+              Contact GUE INDUSTRIAL PARKS LTD. for partnership inquiries, distribution opportunities, and product information. We're building quality consumer goods for African markets.
             </p>
             <div className="page-hero-actions">
               <a href="#contact-form" className="btn-primary">Send Message <ArrowDown size={16} className="arrow" /></a>
@@ -63,11 +63,15 @@ export default function Contact() {
           <div className="reveal" style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto var(--space-md)' }}>
             <h2 className="section-title">Contact Us</h2>
             <p style={{ fontSize: '0.92rem', letterSpacing: '0.04em', textTransform: 'uppercase', color: 'var(--color-sage)', fontWeight: 600 }}>
-              GUE Industries Limited | RC 7501599 | Registered May 17, 2024
+              GUE INDUSTRIAL PARKS LTD. | RC Number: 9482491 | Registered May 17, 2024
             </p>
           </div>
           <p className="section-description reveal" style={{ textAlign: 'center', margin: '0 auto var(--space-3xl)', maxWidth: 800, fontSize: '1rem' }}>
-            Get in touch with GUE Industries Limited! As we launch our manufacturing operations in Nigeria, we welcome inquiries about partnerships, distribution opportunities, and product information. Contact us to learn how we're building quality consumer goods for African markets.
+            Get in touch with GUE INDUSTRIAL PARKS LTD.! As we launch our manufacturing operations in Nigeria, we welcome inquiries about partnerships, distribution opportunities, and product information. Contact us to learn how we're building quality consumer goods for African markets.
+            {' '}GUE INDUSTRIAL PARKS LTD. is a subsidiary of GUE Group Limited, the holding company. Visit GUE Group:{' '}
+            <a href="https://www.guegroup.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
+              www.guegroup.com
+            </a>
           </p>
         </div>
       </section>
@@ -164,7 +168,7 @@ export default function Contact() {
             <p className="section-label" style={{ color: 'var(--color-accent)' }}>Our Vision</p>
             <h2 className="section-title light">Our Continental Vision</h2>
             <p className="section-description light" style={{ margin: '0 auto var(--space-3xl)', textAlign: 'center', maxWidth: 800 }}>
-              Based in Wannune, Tarka, Nigeria, GUE Industries Limited is positioned to leverage the African Continental Free Trade Area (AfCFTA) agreement. We're starting local manufacturing with a vision to expand across West Africa and beyond.
+              Based in Wannune, Tarka, Nigeria, GUE INDUSTRIAL PARKS LTD. is positioned to leverage the African Continental Free Trade Area (AfCFTA) agreement. We're starting local manufacturing with a vision to expand across West Africa and beyond.
             </p>
           </div>
           <div className="stat-grid reveal">
@@ -205,7 +209,7 @@ export default function Contact() {
               style={{ border: 0, borderRadius: 'var(--radius-xl)' }}
               allowFullScreen=""
               loading="lazy"
-              title="GUE Industries Location"
+              title="GUE INDUSTRIAL PARKS LTD. Location"
             />
           </div>
           <div className="reveal" style={{ textAlign: 'center', marginTop: 'var(--space-2xl)' }}>
