@@ -49,6 +49,7 @@ export default function Seo({
   image = DEFAULT_IMAGE,
   type = 'website',
   schema,
+  robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
 }) {
   useEffect(() => {
     const canonicalUrl = new URL(path, `${SITE_URL}/`).toString();
@@ -58,7 +59,7 @@ export default function Seo({
     upsertMeta('meta[name="description"]', { name: 'description', content: description });
     upsertMeta('meta[name="robots"]', {
       name: 'robots',
-      content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+      content: robots,
     });
 
     upsertLink('link[rel="canonical"]', { rel: 'canonical', href: canonicalUrl });
@@ -87,7 +88,7 @@ export default function Seo({
         script.remove();
       }
     };
-  }, [description, image, path, schema, title, type]);
+  }, [description, image, path, robots, schema, title, type]);
 
   return null;
 }
