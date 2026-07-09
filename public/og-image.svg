@@ -1,0 +1,59 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0F1A3A"/>
+  <rect y="611" width="1200" height="4" fill="url(#paint0_linear)"/>
+  <path d="M0 120C201.942 84.2379 335.677 73.3784 528 122C713.239 168.831 858.793 274.598 1200 228V630H0V120Z" fill="url(#paint1_linear)" fill-opacity="0.28"/>
+  <path d="M0 204C165.309 174.982 321.999 186.47 473 228.5C672.173 283.936 831.804 385.503 1200 334V630H0V204Z" fill="url(#paint2_linear)" fill-opacity="0.24"/>
+  <g opacity="0.22">
+    <path d="M0 0H1200" stroke="#94A3B8"/>
+    <path d="M0 52H1200" stroke="#94A3B8"/>
+    <path d="M0 104H1200" stroke="#94A3B8"/>
+    <path d="M0 156H1200" stroke="#94A3B8"/>
+    <path d="M0 208H1200" stroke="#94A3B8"/>
+    <path d="M0 260H1200" stroke="#94A3B8"/>
+    <path d="M0 312H1200" stroke="#94A3B8"/>
+    <path d="M0 364H1200" stroke="#94A3B8"/>
+    <path d="M0 416H1200" stroke="#94A3B8"/>
+    <path d="M0 468H1200" stroke="#94A3B8"/>
+    <path d="M0 520H1200" stroke="#94A3B8"/>
+    <path d="M0 572H1200" stroke="#94A3B8"/>
+    <path d="M80 0V630" stroke="#94A3B8"/>
+    <path d="M160 0V630" stroke="#94A3B8"/>
+    <path d="M240 0V630" stroke="#94A3B8"/>
+    <path d="M320 0V630" stroke="#94A3B8"/>
+    <path d="M400 0V630" stroke="#94A3B8"/>
+    <path d="M480 0V630" stroke="#94A3B8"/>
+    <path d="M560 0V630" stroke="#94A3B8"/>
+    <path d="M640 0V630" stroke="#94A3B8"/>
+    <path d="M720 0V630" stroke="#94A3B8"/>
+    <path d="M800 0V630" stroke="#94A3B8"/>
+    <path d="M880 0V630" stroke="#94A3B8"/>
+    <path d="M960 0V630" stroke="#94A3B8"/>
+    <path d="M1040 0V630" stroke="#94A3B8"/>
+    <path d="M1120 0V630" stroke="#94A3B8"/>
+  </g>
+  <rect x="86" y="87" width="74" height="74" rx="16" fill="url(#paint3_linear)"/>
+  <text x="196" y="132" fill="white" font-family="Syne, Inter, sans-serif" font-size="34" font-weight="800">GUE <tspan fill="#4A6FA5">Industrial Parks</tspan></text>
+  <text x="196" y="170" fill="#A8BCCE" font-family="Inter, sans-serif" font-size="18" font-weight="500">Manufacturing · Processing · Packaging</text>
+  <text x="86" y="324" fill="white" font-family="DM Serif Display, Georgia, serif" font-size="96" font-weight="400">Manufacturing</text>
+  <text x="86" y="420" fill="white" font-family="DM Serif Display, Georgia, serif" font-size="96" font-weight="400">&amp; Packaging Hub</text>
+  <text x="86" y="500" fill="#C4D4E8" font-family="Inter, sans-serif" font-size="28" font-weight="500">Contract manufacturing and packaging solutions for consumer goods in Nigeria and AfCFTA markets.</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="613" x2="1200" y2="613" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CC2020"/>
+      <stop offset="0.55" stop-color="#1A2B5E"/>
+      <stop offset="1" stop-color="#64748B" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="261" y1="130" x2="925" y2="551" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A2B5E"/>
+      <stop offset="1" stop-color="#64748B"/>
+    </linearGradient>
+    <linearGradient id="paint2_linear" x1="182" y1="227" x2="946" y2="573" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4A6FA5"/>
+      <stop offset="1" stop-color="#1A2B5E"/>
+    </linearGradient>
+    <linearGradient id="paint3_linear" x1="86" y1="87" x2="160" y2="161" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A2B5E"/>
+      <stop offset="1" stop-color="#4A6FA5"/>
+    </linearGradient>
+  </defs>
+</svg>

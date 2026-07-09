@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 const SITE_URL = 'https://www.gueindustries.com';
-const DEFAULT_IMAGE = `${SITE_URL}/logo.png`;
+const DEFAULT_IMAGE = `${SITE_URL}/og-image.svg`;
 
 function upsertMeta(selector, attributes) {
   let element = document.head.querySelector(selector);
@@ -69,7 +69,7 @@ export default function Seo({
     upsertMeta('meta[property="og:type"]', { property: 'og:type', content: type });
     upsertMeta('meta[property="og:url"]', { property: 'og:url', content: canonicalUrl });
     upsertMeta('meta[property="og:image"]', { property: 'og:image', content: image });
-    upsertMeta('meta[property="og:image:alt"]', { property: 'og:image:alt', content: 'GUE Industrial Parks Ltd logo' });
+    upsertMeta('meta[property="og:image:alt"]', { property: 'og:image:alt', content: 'GUE Industrial Parks Ltd social preview' });
     upsertMeta('meta[property="og:site_name"]', { property: 'og:site_name', content: 'GUE Industrial Parks Ltd' });
     upsertMeta('meta[property="og:locale"]', { property: 'og:locale', content: 'en_NG' });
 
