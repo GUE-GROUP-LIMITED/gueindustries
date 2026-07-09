@@ -89,9 +89,9 @@ export default function Footer() {
               <Link to="/">Privacy</Link>
               <Link to="/">Legal</Link>
             </div>
-            <span>© 2024–{currentYear} GUE INDUSTRIAL PARKS LTD. RC Number: 9482491.</span>
+            <span>© 2025–{currentYear} GUE INDUSTRIAL PARKS LTD. · RC 9482491 · Tax ID: 2620709291598</span>
             <span style={{ fontSize: '0.82rem', color: 'var(--color-gray-600)' }}>
-              A subsidiary of GUE Group Limited (Holding Company). Visit GUE Group:{' '}
+              Registered 13 April 2026 · A subsidiary of GUE Group Limited (RC 7501599) ·{' '}
               <a href="https://www.guegroup.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>
                 www.guegroup.com
               </a>
@@ -110,6 +110,21 @@ export default function Footer() {
           </div>
         </div>
       </footer>
+
+      {/* Gue Group identity strip */}
+      <div className="footer-group-strip">
+        <div className="footer-group-inner">
+          <div className="footer-group-text">
+            <strong>Part of Gue Group Limited (RC 7501599)</strong>
+            GUE Industrial Parks · Gue Smart Farming · GUE Engineering · GUE Realty · GUE Educational · GUE Mobility · Gue Cyber
+          </div>
+          <div className="footer-group-links">
+            <a href="https://www.guegroup.com" target="_blank" rel="noreferrer">guegroup.com</a>
+            <a href="https://www.guesmartfarming.com" target="_blank" rel="noreferrer">Smart Farming</a>
+            <a href="https://www.guerealty.com" target="_blank" rel="noreferrer">Gue Realty</a>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

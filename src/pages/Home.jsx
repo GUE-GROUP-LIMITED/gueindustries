@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
-import { Cog, ShieldCheck, Package, Truck, ArrowRight, ArrowDown } from 'lucide-react';
+import { Cog, ShieldCheck, Package, Truck, ArrowRight } from 'lucide-react';
 
 const whyChooseUs = [
   {
@@ -50,6 +50,17 @@ const marqueeItems = [
   'Logistics', 'AfCFTA', 'Consumer Goods', 'Production',
 ];
 
+const heroPills = [
+  'Consumer Goods',
+  'Baby Foods',
+  'Animal Feeds',
+  'Industrial Parks',
+  'Packaging',
+  'Import & Export',
+];
+
+const serviceAccentColors = ['var(--gue-red)', 'var(--gue-navy)', 'var(--gue-slate)', 'var(--color-forest-light)'];
+
 export default function Home() {
   const sectionRef = useScrollReveal();
 
@@ -60,6 +71,8 @@ export default function Home() {
         <div className="hero-bg-image" style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1595798896730-9fdf2e709649?w=1920&h=1080&fit=crop&q=80')`
         }} />
+        <div className="hero-topbar" />
+        <div className="hero-grid-overlay" />
         <div className="hero-bg-overlay" />
         <div className="container">
           <div className="hero-content">
@@ -83,6 +96,11 @@ export default function Home() {
                 <Link to="/services" className="btn-secondary">
                   Our Services
                 </Link>
+              </div>
+              <div className="hero-pills" aria-label="Capabilities">
+                {heroPills.map((pill) => (
+                  <span className="hero-pill" key={pill}>{pill}</span>
+                ))}
               </div>
             </div>
             <div className="hero-images">
@@ -117,6 +135,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trust Bar */}
+      <section className="trust-bar" aria-label="Company credentials">
+        <div className="container trust-bar-inner">
+          <span className="trust-item">CAC Registered · RC 9482491</span>
+          <span className="trust-item">Subsidiary of Gue Group Limited</span>
+          <span className="trust-item">Registered 13 April 2026</span>
+          <span className="trust-item">Tax ID: 2620709291598</span>
+        </div>
+      </section>
+
       {/* Marquee */}
       <div className="marquee-section">
         <div className="marquee-track">
@@ -132,6 +160,7 @@ export default function Home() {
       <section className="section" style={{ background: 'var(--color-warm-white)' }}>
         <div className="container">
           <div className="reveal" style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto var(--space-3xl)' }}>
+            <p className="section-kicker">// Why choose us</p>
             <p className="section-label">Why choose us</p>
             <h2 className="section-title">Why Brands Choose GUE</h2>
             <p className="section-description" style={{ margin: '0 auto' }}>
@@ -141,7 +170,14 @@ export default function Home() {
           </div>
           <div className="card-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))' }}>
             {whyChooseUs.map((item, i) => (
-              <div className="service-card reveal" key={item.title} style={{ transitionDelay: `${i * 0.1}s` }}>
+              <div
+                className="service-card reveal"
+                key={item.title}
+                style={{
+                  transitionDelay: `${i * 0.1}s`,
+                  '--card-accent': serviceAccentColors[i % serviceAccentColors.length],
+                }}
+              >
                 <div className="service-card-icon">{item.icon}</div>
                 <h3 className="service-card-title">{item.title}</h3>
                 <p className="service-card-desc">{item.desc}</p>
@@ -161,6 +197,7 @@ export default function Home() {
         <div className="container">
           <div className="feature-split">
             <div className="reveal-left">
+              <p className="section-kicker">// Facilities</p>
               <p className="section-label" style={{ color: 'var(--color-accent)' }}>Our Facilities</p>
               <h2 className="section-title light" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}>
                 Built for Consumer Goods Manufacturing
@@ -190,6 +227,7 @@ export default function Home() {
       <section className="section" style={{ background: 'var(--color-cream)' }}>
         <div className="container">
           <div className="reveal" style={{ marginBottom: 'var(--space-3xl)' }}>
+            <p className="section-kicker">// Infrastructure</p>
             <h2 className="section-title">Our Facilities</h2>
             <p className="section-description">
               State-of-the-art infrastructure designed for efficiency, compliance, and scale.
@@ -210,6 +248,27 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Group Strip */}
+      <section className="section-sm" style={{ background: 'var(--color-warm-white)', paddingTop: 0 }}>
+        <div className="container">
+          <div className="group-strip-card reveal-scale">
+            <div className="group-strip-main">
+              <p className="group-strip-label">// Part of the Group</p>
+              <h3 className="group-strip-title">A Subsidiary of Gue Group Limited</h3>
+              <p className="group-strip-desc">
+                GUE Industrial Parks Ltd operates under Gue Group Limited (RC 7501599), alongside
+                Gue Cyber, GUE Engineering, GUE Realty, GUE Smart Farming, GUE Educational, and GUE Mobility.
+              </p>
+            </div>
+            <div className="group-strip-links">
+              <a href="https://www.guegroup.com" target="_blank" rel="noreferrer">Gue Group</a>
+              <a href="https://www.guesmartfarming.com" target="_blank" rel="noreferrer">Smart Farming</a>
+              <a href="https://www.guerealty.com" target="_blank" rel="noreferrer">Gue Realty</a>
+            </div>
           </div>
         </div>
       </section>
