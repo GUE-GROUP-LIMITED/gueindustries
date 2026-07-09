@@ -19,11 +19,11 @@ const serviceLinks = [
 ];
 
 const legalLinks = [
-  { label: 'Terms', path: '/' },
-  { label: 'Privacy', path: '/' },
-  { label: 'Legal', path: '/' },
-  { label: 'Privacy Policy', path: '/' },
-  { label: 'Terms of Service', path: '/' },
+  { label: 'Terms', path: '/terms' },
+  { label: 'Privacy', path: '/privacy' },
+  { label: 'Legal', path: '/legal' },
+  { label: 'Privacy Policy', path: '/privacy' },
+  { label: 'Terms of Service', path: '/terms' },
 ];
 
 const groupLinks = [

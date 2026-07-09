@@ -32,7 +32,19 @@ export default function Contact() {
       return;
     }
 
-    setFeedback({ type: 'success', messages: ['Thank you for your message! We will get back to you soon. For immediate assistance, call +234 704 695 2003.'] });
+    const subject = encodeURIComponent(`Website enquiry: ${formData.subject}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`,
+    );
+
+    window.location.href = `mailto:info@gueindustries.com?subject=${subject}&body=${body}`;
+    setFeedback({
+      type: 'success',
+      messages: [
+        'Your email app should open with a prefilled message to info@gueindustries.com.',
+        'If nothing opens, email us directly at info@gueindustries.com or call +234 704 695 2003.',
+      ],
+    });
     setFormData({ name: '', email: '', subject: '', message: '' });
     setTimeout(() => setFeedback(null), 5000);
   };
@@ -76,15 +88,11 @@ export default function Contact() {
           <div className="reveal" style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto var(--space-md)' }}>
             <h2 className="section-title">Contact Us</h2>
             <p style={{ fontSize: '0.92rem', letterSpacing: '0.04em', textTransform: 'uppercase', color: 'var(--color-sage)', fontWeight: 600 }}>
-              GUE INDUSTRIAL PARKS LTD. | RC Number: 9482491 | Registered May 17, 2024
+              GUE INDUSTRIAL PARKS LTD. | RC Number: 9482491 | Registered 13 April 2026
             </p>
           </div>
           <p className="section-description reveal" style={{ textAlign: 'center', margin: '0 auto var(--space-3xl)', maxWidth: 800, fontSize: '1rem' }}>
             Get in touch with GUE INDUSTRIAL PARKS LTD.! As we launch our manufacturing operations in Nigeria, we welcome inquiries about partnerships, distribution opportunities, and product information. Contact us to learn how we're building quality consumer goods for African markets.
-            {' '}GUE INDUSTRIAL PARKS LTD. is a subsidiary of GUE Group Limited, the holding company. Visit GUE Group:{' '}
-            <a href="https://www.guegroup.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
-              www.guegroup.com
-            </a>
           </p>
         </div>
       </section>
