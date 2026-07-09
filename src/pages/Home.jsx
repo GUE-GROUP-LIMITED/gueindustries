@@ -84,10 +84,6 @@ export default function Home() {
               <p className="hero-subtitle">
                 GUE INDUSTRIAL PARKS LTD. turns raw materials into shelf-ready consumer goods—cooking oil, rice,
                 detergents, beverages, spices, personal care, and household essentials—built for Africa under AfCFTA.
-                {' '}We are a subsidiary of GUE Group Limited, our holding company. Visit:{' '}
-                <a href="https://www.guegroup.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
-                  www.guegroup.com
-                </a>
               </p>
               <div className="hero-actions">
                 <Link to="/products" className="btn-primary">

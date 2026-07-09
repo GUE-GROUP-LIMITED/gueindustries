@@ -1,27 +1,37 @@
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
-const footerLinks = {
-  'Quick Links': [
-    { label: 'Home', path: '/' },
-    { label: 'About Us', path: '/about' },
-    { label: 'Services', path: '/services' },
-    { label: 'Products', path: '/products' },
-    { label: 'Contact', path: '/contact' },
-  ],
-  'Our Services': [
-    { label: 'Manufacturing', path: '/services' },
-    { label: 'Finishing & Packaging', path: '/services' },
-    { label: 'Quality Control', path: '/services' },
-    { label: 'Logistics', path: '/services' },
-    { label: 'Process Optimization', path: '/services' },
-  ],
-};
+const companyLinks = [
+  { label: 'Home', path: '/' },
+  { label: 'About', path: '/about' },
+  { label: 'Services', path: '/services' },
+  { label: 'Products', path: '/products' },
+  { label: 'Contact', path: '/contact' },
+  { label: 'History', path: '/about' },
+];
 
-const faqItems = [
-  'What products does GUE INDUSTRIAL PARKS LTD. manufacture?',
-  'How can I partner with GUE INDUSTRIAL PARKS LTD.?',
-  'What regions do you serve?',
+const serviceLinks = [
+  { label: 'Manufacturing', path: '/services' },
+  { label: 'Finishing & Packaging', path: '/services' },
+  { label: 'Quality Control', path: '/services' },
+  { label: 'Logistics', path: '/services' },
+  { label: 'Process Optimization', path: '/services' },
+];
+
+const legalLinks = [
+  { label: 'Terms', path: '/' },
+  { label: 'Privacy', path: '/' },
+  { label: 'Legal', path: '/' },
+  { label: 'Privacy Policy', path: '/' },
+  { label: 'Terms of Service', path: '/' },
+];
+
+const groupLinks = [
+  { label: 'Gue Group Limited', href: 'https://www.guegroup.com' },
+  { label: 'Gue Smart Farming', href: 'https://www.guesmartfarming.com' },
+  { label: 'Gue Realty', href: 'https://www.guerealty.com' },
+  { label: 'Gue Cyber Nigeria', href: 'https://www.guecyber.ng' },
+  { label: 'Gue Cyber Belgium', href: 'https://www.guecyber.com' },
 ];
 
 export default function Footer() {
@@ -44,23 +54,15 @@ export default function Footer() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <div className="footer-grid">
-            {/* Link Columns */}
-            {Object.entries(footerLinks).map(([title, links]) => (
-              <div className="footer-col" key={title}>
-                <h4 className="footer-col-title">{title}</h4>
-                {links.map((link) => (
-                  <Link key={link.label} to={link.path}>
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            ))}
-
-            {/* Contact Column */}
-            <div className="footer-col">
-              <h4 className="footer-col-title">Contact</h4>
-              <p style={{ fontSize: '0.88rem', color: 'var(--color-gray-600)', lineHeight: '1.8' }}>
+          <div className="footer-main">
+            <div className="footer-brand-col">
+              <h3 className="footer-brand-name">
+                GUE <em>Industrial Parks</em>
+              </h3>
+              <p className="footer-brand-sub">
+                Manufacturing · Processing · Packaging · Industrial Solutions · Subsidiary of Gue Group Limited
+              </p>
+              <p className="footer-contact-lines">
                 Wannune, Tarka, Nigeria<br />
                 +234 704 695 2003<br />
                 info@gueindustries.com<br />
@@ -68,34 +70,57 @@ export default function Footer() {
               </p>
             </div>
 
-            {/* FAQ Column */}
-            <div className="footer-col">
-              <h3 className="footer-faq-title">
-                Maybe Your Question Has Been Answered, Check This Out.
-              </h3>
-              {faqItems.map((item) => (
-                <div className="footer-faq-item" key={item}>
-                  <span>{item}</span>
-                  <ArrowRight size={14} className="faq-arrow" />
-                </div>
-              ))}
+            <div className="footer-nav-col">
+              <h4 className="footer-nav-title">Company</h4>
+              <ul>
+                {companyLinks.map((link) => (
+                  <li key={link.label}>
+                    <Link to={link.path} className="footer-nav-link">{link.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="footer-nav-col">
+              <h4 className="footer-nav-title">Our Services</h4>
+              <ul>
+                {serviceLinks.map((link) => (
+                  <li key={link.label}>
+                    <Link to={link.path} className="footer-nav-link">{link.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="footer-nav-col">
+              <h4 className="footer-nav-title">Gue Group</h4>
+              <ul>
+                {groupLinks.map((link) => (
+                  <li key={link.label}>
+                    <a href={link.href} className="footer-nav-link" target="_blank" rel="noopener noreferrer">{link.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="footer-nav-col">
+              <h4 className="footer-nav-title">Legal</h4>
+              <ul>
+                {legalLinks.map((link) => (
+                  <li key={link.label}>
+                    <Link to={link.path} className="footer-nav-link">{link.label}</Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
-          {/* Bottom Bar */}
           <div className="footer-bottom">
-            <div className="footer-bottom-links">
-              <Link to="/">Terms</Link>
-              <Link to="/">Privacy</Link>
-              <Link to="/">Legal</Link>
-            </div>
-            <span>© 2025–{currentYear} GUE INDUSTRIAL PARKS LTD. · RC 9482491 · Tax ID: 2620709291598</span>
-            <span style={{ fontSize: '0.82rem', color: 'var(--color-gray-600)' }}>
-              Registered 13 April 2026 · A subsidiary of GUE Group Limited (RC 7501599) ·{' '}
-              <a href="https://www.guegroup.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>
-                www.guegroup.com
-              </a>
+            <span>
+              © 2025–{currentYear} GUE INDUSTRIAL PARKS LTD. · RC 9482491 · Tax ID: 2620709291598 ·
+              Subsidiary of Gue Group Limited (RC 7501599) · Nigeria
             </span>
+            <a href="mailto:info@gueindustries.com" className="footer-mail-link">info@gueindustries.com</a>
             <div className="footer-socials">
               <a href="https://facebook.com" className="footer-social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -108,23 +133,13 @@ export default function Footer() {
               </a>
             </div>
           </div>
+
+          <div className="footer-group-note">
+            Registered 13 April 2026 · A subsidiary of GUE Group Limited (RC 7501599) ·
+            <a href="https://www.guegroup.com/" target="_blank" rel="noopener noreferrer">www.guegroup.com</a>
+          </div>
         </div>
       </footer>
-
-      {/* Gue Group identity strip */}
-      <div className="footer-group-strip">
-        <div className="footer-group-inner">
-          <div className="footer-group-text">
-            <strong>Part of Gue Group Limited (RC 7501599)</strong>
-            GUE Industrial Parks · Gue Smart Farming · GUE Engineering · GUE Realty · GUE Educational · GUE Mobility · Gue Cyber
-          </div>
-          <div className="footer-group-links">
-            <a href="https://www.guegroup.com" target="_blank" rel="noreferrer">guegroup.com</a>
-            <a href="https://www.guesmartfarming.com" target="_blank" rel="noreferrer">Smart Farming</a>
-            <a href="https://www.guerealty.com" target="_blank" rel="noreferrer">Gue Realty</a>
-          </div>
-        </div>
-      </div>
     </>
   );
 }

@@ -28,6 +28,7 @@ export default function Navbar() {
     { path: '/services', label: 'Services' },
     { path: '/products', label: 'Products' },
     { path: '/contact', label: 'Contact' },
+    { href: 'https://www.guegroup.com', label: 'Gue Group' },
   ];
 
   return (
@@ -38,18 +39,26 @@ export default function Navbar() {
           <div className="navbar-inner">
             <Link to="/" className="navbar-logo">
               <img src="/logo.png" alt="GUE INDUSTRIAL PARKS LTD. Logo" />
-              <span>GUE INDUSTRIAL PARKS LTD.</span>
+              <div className="nav-name">
+                GUE <em>Industrial Parks</em>
+              </div>
             </Link>
 
             <div className="navbar-links">
               {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={location.pathname === link.path ? 'active' : ''}
-                >
-                  {link.label}
-                </Link>
+                link.path ? (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className={location.pathname === link.path ? 'active' : ''}
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">
+                    {link.label}
+                  </a>
+                )
               ))}
             </div>
 
@@ -73,13 +82,25 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         {navLinks.map((link, i) => (
-          <Link
-            key={link.path}
-            to={link.path}
-            style={{ animationDelay: `${i * 0.08}s` }}
-          >
-            {link.label}
-          </Link>
+          link.path ? (
+            <Link
+              key={link.path}
+              to={link.path}
+              style={{ animationDelay: `${i * 0.08}s` }}
+            >
+              {link.label}
+            </Link>
+          ) : (
+            <a
+              key={link.href}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ animationDelay: `${i * 0.08}s` }}
+            >
+              {link.label}
+            </a>
+          )
         ))}
       </div>
     </>
