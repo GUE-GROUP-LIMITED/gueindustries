@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { MapPin, Phone, Mail, Factory, Globe, TrendingUp, ArrowRight, ArrowDown } from 'lucide-react';
+import Seo from '../components/Seo';
 
 const visionCards = [
   { icon: <Factory size={32} />, title: 'Manufacturing Hub', desc: 'Nigeria-based production facility' },
@@ -38,6 +39,18 @@ export default function Contact() {
 
   return (
     <div className="page-transition" ref={sectionRef}>
+      <Seo
+        title="Contact | GUE Industrial Parks Ltd"
+        description="Contact GUE Industrial Parks Ltd for manufacturing partnerships, product information, distribution opportunities, and business inquiries in Nigeria and West Africa."
+        path="/contact"
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'ContactPage',
+          name: 'Contact GUE Industrial Parks Ltd',
+          url: 'https://www.gueindustries.com/contact',
+          description: 'Contact page for GUE Industrial Parks Ltd with location, email, phone, and inquiry form.',
+        }}
+      />
       {/* Hero */}
       <section className="page-hero">
         <div className="page-hero-bg" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1759384628232-134f0d2f154d?w=1920&h=1080&fit=crop&q=80')` }} />

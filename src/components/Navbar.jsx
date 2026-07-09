@@ -12,10 +12,14 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
+  useEffect(() => () => {
+    document.body.style.overflow = '';
+  }, []);
+
+  const closeMenu = () => {
     setMenuOpen(false);
     document.body.style.overflow = '';
-  }, [location]);
+  };
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -51,11 +55,12 @@ export default function Navbar() {
                     key={link.path}
                     to={link.path}
                     className={location.pathname === link.path ? 'active' : ''}
+                    onClick={closeMenu}
                   >
                     {link.label}
                   </Link>
                 ) : (
-                  <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">
+                  <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
                     {link.label}
                   </a>
                 )
@@ -63,7 +68,7 @@ export default function Navbar() {
             </div>
 
             <div className="navbar-cta">
-              <Link to="/contact" className="btn-outline">Get in Touch</Link>
+              <Link to="/contact" className="btn-outline" onClick={closeMenu}>Get in Touch</Link>
               <button
                 className={`menu-toggle ${menuOpen ? 'open' : ''}`}
                 onClick={toggleMenu}
@@ -87,6 +92,7 @@ export default function Navbar() {
               key={link.path}
               to={link.path}
               style={{ animationDelay: `${i * 0.08}s` }}
+              onClick={closeMenu}
             >
               {link.label}
             </Link>
@@ -97,6 +103,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               style={{ animationDelay: `${i * 0.08}s` }}
+              onClick={closeMenu}
             >
               {link.label}
             </a>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { ArrowRight, ArrowDown } from 'lucide-react';
+import Seo from '../components/Seo';
 
 const products = [
   {
@@ -71,6 +72,18 @@ export default function Products() {
 
   return (
     <div className="page-transition" ref={sectionRef}>
+      <Seo
+        title="Products | GUE Industrial Parks Ltd"
+        description="View GUE Industrial Parks Ltd product categories including household cleaning, personal care, food and beverage, packaging, baby care, and animal feed."
+        path="/products"
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'Products by GUE Industrial Parks Ltd',
+          url: 'https://www.gueindustries.com/products',
+          description: 'Consumer goods product categories manufactured and packaged by GUE Industrial Parks Ltd.',
+        }}
+      />
       {/* Hero */}
       <section className="page-hero">
         <div className="page-hero-bg" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1598285385411-c5952310875e?w=1920&h=1080&fit=crop&q=80')` }} />

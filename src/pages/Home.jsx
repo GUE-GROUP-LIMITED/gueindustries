@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { Cog, ShieldCheck, Package, Truck, ArrowRight } from 'lucide-react';
+import Seo from '../components/Seo';
 
 const whyChooseUs = [
   {
@@ -66,6 +67,36 @@ export default function Home() {
 
   return (
     <div className="page-transition" ref={sectionRef}>
+      <Seo
+        title="GUE Industrial Parks Ltd | Manufacturing & Packaging Hub"
+        description="GUE Industrial Parks Ltd provides contract manufacturing, processing, packaging, and industrial production support for consumer goods in Nigeria and across AfCFTA markets."
+        path="/"
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          name: 'GUE Industrial Parks Ltd',
+          url: 'https://www.gueindustries.com/',
+          logo: 'https://www.gueindustries.com/logo.png',
+          description: 'Contract manufacturing, processing, packaging, and industrial production support for consumer goods in Nigeria and AfCFTA markets.',
+          parentOrganization: {
+            '@type': 'Organization',
+            name: 'GUE Group Limited',
+            url: 'https://www.guegroup.com/',
+          },
+          contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: '+234-704-695-2003',
+            contactType: 'customer service',
+            areaServed: 'NG',
+            availableLanguage: 'en',
+          },
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Wannune, Tarka',
+            addressCountry: 'NG',
+          },
+        }}
+      />
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-bg-image" style={{

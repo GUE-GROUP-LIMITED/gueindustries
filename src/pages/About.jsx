@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { ArrowRight } from 'lucide-react';
+import Seo from '../components/Seo';
 
 const whatWeDo = [
   { title: 'Manufacturing', desc: 'Blending, filling, cooking, and assembly lines tailored to consumer staples.' },
@@ -27,6 +28,18 @@ export default function About() {
 
   return (
     <div className="page-transition" ref={sectionRef}>
+      <Seo
+        title="About | GUE Industrial Parks Ltd"
+        description="Learn about GUE Industrial Parks Ltd, our manufacturing model, GMP-aligned operations, AfCFTA strategy, and how we scale consumer goods production in Nigeria."
+        path="/about"
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'AboutPage',
+          name: 'About GUE Industrial Parks Ltd',
+          url: 'https://www.gueindustries.com/about',
+          description: 'Overview of GUE Industrial Parks Ltd, its operations, quality approach, and expansion strategy across Africa.',
+        }}
+      />
       {/* Hero */}
       <section className="page-hero">
         <div className="page-hero-bg" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1513828646384-e4d8ec30d2bb?w=1920&h=1080&fit=crop&q=80')` }} />

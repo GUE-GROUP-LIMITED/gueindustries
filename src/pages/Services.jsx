@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { Cog, Package, ShieldCheck, Truck, BarChart3, Globe, ArrowRight } from 'lucide-react';
+import Seo from '../components/Seo';
 
 const services = [
   {
@@ -40,6 +41,24 @@ export default function Services() {
 
   return (
     <div className="page-transition" ref={sectionRef}>
+      <Seo
+        title="Services | GUE Industrial Parks Ltd"
+        description="Explore GUE Industrial Parks Ltd services: manufacturing, finishing, packaging, quality assurance, warehousing, logistics, and AfCFTA-ready production support."
+        path="/services"
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          serviceType: 'Contract manufacturing and packaging',
+          provider: {
+            '@type': 'Organization',
+            name: 'GUE Industrial Parks Ltd',
+            url: 'https://www.gueindustries.com/',
+          },
+          areaServed: 'Nigeria and West Africa',
+          url: 'https://www.gueindustries.com/services',
+          description: 'Manufacturing, finishing, packaging, quality, logistics, and AfCFTA-ready production services.',
+        }}
+      />
       {/* Hero */}
       <section className="page-hero">
         <div className="page-hero-bg" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=1920&h=1080&fit=crop&q=80')` }} />
