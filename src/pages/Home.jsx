@@ -85,7 +85,7 @@ export default function Home() {
           },
           contactPoint: {
             '@type': 'ContactPoint',
-            telephone: '+234-704-695-2003',
+            telephone: '+234-904-115-7068',
             contactType: 'customer service',
             areaServed: 'NG',
             availableLanguage: 'en',

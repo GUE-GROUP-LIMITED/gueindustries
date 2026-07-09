@@ -64,7 +64,7 @@ export default function Footer() {
               </p>
               <p className="footer-contact-lines">
                 Wannune, Tarka, Nigeria<br />
-                +234 704 695 2003<br />
+                0904 115 7068<br />
                 info@gueindustries.com<br />
                 contact@gueindustries.com
               </p>

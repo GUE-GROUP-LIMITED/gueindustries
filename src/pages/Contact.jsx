@@ -42,7 +42,7 @@ export default function Contact() {
       type: 'success',
       messages: [
         'Your email app should open with a prefilled message to info@gueindustries.com.',
-        'If nothing opens, email us directly at info@gueindustries.com or call +234 704 695 2003.',
+        'If nothing opens, email us directly at info@gueindustries.com or call 0904 115 7068.',
       ],
     });
     setFormData({ name: '', email: '', subject: '', message: '' });
@@ -156,7 +156,7 @@ export default function Contact() {
                   <div className="contact-info-icon"><Phone size={20} /></div>
                   <div>
                     <div className="contact-info-label">Phone</div>
-                    <div className="contact-info-value">+234 704 695 2003</div>
+                    <div className="contact-info-value">0904 115 7068</div>
                   </div>
                 </div>
                 <div className="contact-info-item">
